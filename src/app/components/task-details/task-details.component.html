@@ -1,0 +1,34 @@
+<!-- Start Header  -->
+<div class="top-header">
+  <p>Task Details</p>
+</div>
+<!-- Start details table  -->
+<div class="detailed-table">
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 example-full-width">
+  
+    <!-- Title Column -->
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef> Title </th>
+      <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+    </ng-container>
+  
+    <!-- Date Column -->
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef> Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+    </ng-container>
+  
+    <!-- Group Column -->
+    <ng-container matColumnDef="group">
+      <th mat-header-cell *matHeaderCellDef> Group </th>
+      <td mat-cell *matCellDef="let element"> {{element.group}} </td>
+    </ng-container>
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <div class="addListBtn">
+     <div><button (click)="backBtn()" class="add-task">Back</button></div>
+ </div>
+</div>
+  

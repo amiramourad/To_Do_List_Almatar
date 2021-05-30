@@ -1,0 +1,237 @@
+/* Start-variables */
+$main-background-image: linear-gradient(181deg, #4ba2d1 117%, #d0e4e0 8%);
+$main-font-size: 18px;
+$main-font-weight: normal;
+$main-font-stretch: normal;
+$main-font-style: normal;
+$main-line-height: normal;
+$main-letter-spacing: normal;
+$main-color: #363636;
+/* End-variables */
+/* Start-Global-Rules */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    $main-font-family: 'Roboto';
+     overflow: hidden;
+}
+/* End-Global-Rules */
+
+//Start side menu 
+.container-side{
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  z-index: 1;
+  transition: 0.5s ease;
+  transform: translateX(0);
+}
+ .container-side .head-toggle{
+   background-color: #678cab;
+   height: 61px;
+   position: relative;
+ }
+ .container-side .head-profile{
+  background-color: #f1fdff;
+  height: 90px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 15px;
+}
+.container-side .head-profile .profile-image{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+ ol{
+   width: 100%;
+   list-style: none;
+ }
+ ol li{
+   display: block;
+   width: 100%;
+ }
+ ol li a{
+  color: $main-color;
+  padding: 10px 35px;
+  text-decoration: none;
+  display: block;
+  font-size: $main-font-size;
+  letter-spacing: 1px;
+  position: relative;
+  transition: 0.3s;
+  overflow: hidden;
+  text-transform: capitalize;
+ }
+ ol li a i{
+   width: 100%;
+   font-size: $main-font-size;
+   text-align: center;
+   padding-left: 30px;
+
+ }
+ ol li:hover a{
+   background-color: #4d708e;;
+   color: white;
+ }
+ input{
+   -webkit-appearance: none;
+   visibility: hidden;
+   display: none;
+ }
+.container-side .head-toggle #times {
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-content: center;
+   position: absolute;
+    left:8%;
+    top: 25px;
+}
+.container-side .head-toggle #search {
+  color: white;
+  cursor: pointer;
+   position: absolute;
+   right:8%;
+   top: 19px;
+}
+#bars{
+  background-color: red;
+  display: none;
+}
+#check:checked ~ .container-side {
+  transform: translateX(-250px);
+}
+#check:checked ~ .container-side #bars{
+  display: none;
+}
+@media (max-width :768px) {
+  .container-side{
+    transform: translateX(-250px);
+    .container-side #bars{
+      display: block;
+    }
+    .container-side .head-toggle #times{
+      position: absolute;
+      left:70%;
+      top: 25px;
+    }
+  }
+
+}
+ //End side menu 
+
+// Start List header 
+.header{
+  width: 100%;
+  height: 61px;
+  background-color: #4d708e;
+  position: relative;
+}
+
+.header p{
+  position: absolute;
+  left: 2%;
+  top: 11px;
+  color: white;
+  font-size: 22px;
+  }
+
+// End List header 
+
+/* Start Landing Section  */
+.landing{
+  background-image: $main-background-image;
+  background-size: cover;
+  height: calc(100vh - 61px);
+  position: relative;
+  transition: 0.3s;
+  } 
+  #check:checked ~ .landing{
+    transform:scale(1.2);
+    filter: brightness(20%);
+  }
+ .landing .landing__newtask--btn button{
+    width: 127px;
+    height: 37px;
+    background-color: #183c5b;
+    border-radius: 5px;
+    outline: none;
+    margin-right: 4%;
+    color: #fff;
+  }
+  .landing .landing__newtask--btn{
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 14px;}
+  .landing .filter label{
+    font-size: $main-font-size;
+    color: #fff;
+    margin-left: 5%;
+  }
+  .landing .filter .filter-area {
+    width: 90%;
+    margin: auto;
+   height: 97px;
+   border-radius: 2px;
+   background-color: white;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+  }
+  .landing .filter .filter-area .full-width{
+    margin: 15px;
+  }
+  .landing .group-one{
+      width: 107px;
+      padding: 7px;
+      border-radius: 3px;
+      background-color: #427a95;
+      opacity: 50%;
+      color: white;
+      margin-left: 5%;
+      margin-top: 2%;
+      text-align: center;
+  }
+  .landing .list-one {
+    display: flex;
+    margin-right: 5%;
+    margin-top: 2%;
+    gap:5px;
+    position: absolute;
+    right: 0;
+    }
+.landing .list-one button{
+width: 176px;
+height: 36px;
+background-color: #949494;
+opacity: 60%;
+color:#fff;
+font-size: $main-font-size;
+border-radius: 5px;
+}
+.landing__groupone--btn{
+  display: flex;
+  flex-direction: row;
+}
+  /* End Landing Section  */
+.example-full-width{
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+}
+.home-width{
+  width: 180px !important;
+}
+.table-Data{
+  cursor: pointer;
+}

@@ -1,0 +1,48 @@
+<!-- Start Header  -->
+<div class="top-header">
+    <p>Add New Task</p>
+</div>
+<!-- start table  -->
+<div class="tasksData">
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Add Title" [(ngModel)]="taskTitle">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput [matDatepicker]="picker3" placeholder="Choose Date" [value]="date.value" [(ngModel)]="taskDate">
+        <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+        <mat-datepicker #picker3></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Select Group</mat-label>
+        <mat-select [(value)]="selected">
+            <mat-option value="none">None</mat-option>
+            <mat-option value="Group 1">Group 1</mat-option>
+            <mat-option value="Group 2">Group 2</mat-option>
+            <mat-option value="Group 3">Group 3</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div class="addListBtn">
+        <div><button (click)="addToList()" class="add-task">ADD TASK</button></div>
+         <div><button (click)="backBtn()" class="add-task">Back</button></div>
+     </div>
+</div>
+
+
+
+
+
+<!--Tasks added repeated divisions-->
+<!-- <div *ngFor="let item of items; let index = index;" class="row mt-1" style="height:100px;">
+
+    <div class="col-3 d-none col-md-3 d-md-block"></div>
+
+    <div class="col-12 col-md-6 bg-success d-flex
+                    justify-content-center align-items-center
+                    text-light h3">
+        <div class="col-9 text-light h3">{{item}}</div>
+        <input (click)="deleteTask(index)" type="button" value="Delete" class="col-2 btn btn-danger">
+    </div>
+    <div class="col-3 d-none col-md-3 d-md-block"></div>
+</div> -->

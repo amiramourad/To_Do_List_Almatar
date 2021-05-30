@@ -1,0 +1,45 @@
+// import main tyles
+@import "../../../styles.scss";
+// Start top header
+.top-header{
+  background-color: $header-color;
+  width: 100%;
+  height: 61px;
+  position: relative;
+}
+.top-header p{
+  position: absolute;
+  left: 2%;
+  top: 33%;
+  color: white;
+  font-size: 22px;
+}
+// End top header
+// start detailed table 
+table {
+  width: 100%;
+}
+.example-full-width {
+  width: 60%;
+}
+.detailed-table{
+  background-image: $main-background-image;
+  background-size: cover;
+  height: calc(100vh - 61px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+// End detailed table 
+// Start button
+.add-task{
+  margin-top: 10%;
+  width: 127px;
+  height: 37px;
+  background-color: #183c5b;
+  border-radius: 5px;
+  font-size: $main-font-size;
+  color: #fff;
+}
+// End button

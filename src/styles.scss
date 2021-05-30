@@ -1,0 +1,33 @@
+// add fontawsome
+@import '../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+// add normalize
+@import '../node_modules/normalize-scss/sass/_normalize.scss';
+// add bootstrap
+@import '~bootstrap/dist/css/bootstrap.min.css';
+// for angular material
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/* Start-variables */
+$main-background-image: linear-gradient(181deg, #4ba2d1 117%, #d0e4e0 8%);
+$main-font-size: 18px;
+$main-font-weight: normal;
+$main-font-stretch: normal;
+$main-font-style: normal;
+$main-line-height: normal;
+$main-letter-spacing: normal;
+$main-color: #363636;
+$header-color : #4d708e;
+/* End-variables */
+/* Start-Global-Rules */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    $main-font-family: 'Roboto';
+     overflow: hidden;
+}
+/* End-Global-Rules */
+
